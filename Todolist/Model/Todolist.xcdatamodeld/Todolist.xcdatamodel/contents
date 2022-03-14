@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Todo" representedClassName=".Todo" syncable="YES" codeGenerationType="class">
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateTodo" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="index" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="notificationIdentifier" optional="YES" attributeType="String"/>
+        <attribute name="priority" attributeType="String"/>
+        <relationship name="list" maxCount="1" deletionRule="Nullify" destinationEntity="TodoList" inverseName="todos" inverseEntity="TodoList"/>
+    </entity>
+    <entity name="TodoList" representedClassName=".TodoList" syncable="YES" codeGenerationType="class">
+        <attribute name="colorName" attributeType="String"/>
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageName" attributeType="String" defaultValueString="list.bullet"/>
+        <attribute name="index" attributeType="Integer 64" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" maxValueString="20" defaultValueString="Todo"/>
+        <relationship name="todos" optional="YES" toMany="YES" maxCount="999" deletionRule="Cascade" ordered="YES" destinationEntity="Todo" inverseName="list" inverseEntity="Todo"/>
+    </entity>
+    <elements>
+        <element name="Todo" positionX="-34.203125" positionY="-132.73046875" width="128" height="164"/>
+        <element name="TodoList" positionX="-384.453125" positionY="3.06640625" width="128" height="134"/>
+    </elements>
+</model>
