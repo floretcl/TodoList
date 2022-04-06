@@ -131,8 +131,8 @@ struct TodoDetailContent: View {
                                     }
                                     
                             ) {
-                                ForEach(TodoVM.TodoPriority.allCases.indices) { index in
-                                    Text(TodoVM.TodoPriority.allCases[index].name).tag(TodoVM.TodoPriority.allCases[index])
+                                ForEach(TodoVM.TodoPriority.allCases, id: \.self) { priority in
+                                    Text(priority.name).tag(priority)
                                 }
                             }
                         }.padding(.vertical, 10)
@@ -149,8 +149,8 @@ struct TodoDetailContent: View {
                                     }
                                     
                             ) {
-                                ForEach(TodoVM.TodoPriority.allCases.indices) { index in
-                                    Text(TodoVM.TodoPriority.allCases[index].name).tag(TodoVM.TodoPriority.allCases[index])
+                                ForEach(TodoVM.TodoPriority.allCases, id: \.self) { priority in
+                                    Text(priority.name).tag(priority)
                                 }
                             }
                         }.padding(.vertical, 10)

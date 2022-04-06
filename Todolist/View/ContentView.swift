@@ -120,7 +120,7 @@ struct ContentView: View {
                 }
             }
             .padding(.bottom, 1)
-            .navigationTitle(Text("Lists"))
+            .navigationTitle("Lists")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
