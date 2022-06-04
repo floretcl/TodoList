@@ -174,12 +174,12 @@ struct TodoListVM: Identifiable {
         return todoList
     }
     
-    // todos count from a TooList
+    // todos count from a TodoList
     func getTodosCount() -> Int {
         return todos.count
     }
     
-    // todos done count from TooList
+    // todos done count from TodoList
     func getDoneTodosCount() -> Int {
         var count: Int = 0
         for todo in todos {
@@ -190,7 +190,7 @@ struct TodoListVM: Identifiable {
         return count
     }
     
-    // todos not done from TooList
+    // todos not done from TodoList
     func getTodosNotDone() -> [TodoVM] {
         return todos.filter { todo in
             todo.done == false
