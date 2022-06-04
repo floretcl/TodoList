@@ -190,9 +190,9 @@ struct AddTodoContent: View {
                     }.disabled(todoName.isBlank)
                 }
             }.onAppear {
-                if list != nil {
+                if list != nil && todoListVM == nil {
                     todoListSelection = list!.name
-                } else {
+                } else if todoListVM == nil {
                     todoListSelection = todoListsVM.lists[0].name
                 }
             }
