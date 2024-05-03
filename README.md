@@ -1,2 +1,4 @@
-# TodoList-MVVM-CoreData
- A simple Todolist App, like Apple one
+# TodoList
+
+A simple Todolist App, like Apple one
+Swift, SwiftUI, MVVM, CoreData
